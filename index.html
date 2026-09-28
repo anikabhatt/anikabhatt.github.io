@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anika Bhatt | Finance & Operations Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --header-bg: #0f172a;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --border: #e2e8f0;
+      --border-hover: #cbd5e1;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+      --shadow-lg: 0 10px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.04);
+      --radius: 16px;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+
+    .logo span {
+      color: #38bdf8;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: #38bdf8;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 3.5rem 3rem;
+      box-shadow: var(--shadow-sm);
+      margin-top: 1rem;
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffffff;
+      outline: 2px solid var(--primary);
+      box-shadow: var(--shadow-md);
+      flex-shrink: 0;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--text-main);
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.8px;
+    }
+
+    .personal-statement {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 1.8rem;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .personal-statement strong {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 2px 4px rgba(2, 132, 199, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg);
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    section {
+      margin-top: 4rem;
+    }
+
+    .section-header {
+      margin-bottom: 1.8rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+
+    .section-title i {
+      color: var(--primary);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1.6rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .skill-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .skill-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .skill-card h3 i {
+      color: var(--primary);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.7rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .project-header h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--text-main);
+      letter-spacing: -0.3px;
+    }
+
+    .project-role {
+      font-size: 0.8rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.8rem;
+      line-height: 1.6;
+    }
+
+    .project-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 1.2rem;
+    }
+
+    .project-tech {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .project-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    footer {
+      margin-top: 6rem;
+      padding: 2.5rem 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 850px) {
+      .hero-card {
+        flex-direction: column;
+        padding: 2.5rem 1.8rem;
+        text-align: center;
+        gap: 1.8rem;
+      }
+
+      .contact-buttons {
+        justify-content: center;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">Anika<span>Bhatt</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section id="about" style="margin-top: 0;">
+      <div class="hero-card">
+        <img src="headshot.jpg" alt="Anika Bhatt" class="profile-pic">
+        <div class="hero-content">
+          <div class="badge">
+            <i class="fa-solid fa-graduation-cap"></i> Rutgers Business School Class of '28
+          </div>
+          <h1>Hello, I'm Anika Bhatt</h1>
+          <p class="personal-statement">
+            <strong>Finance major</strong> at Rutgers Business School with practical experience in business operations, client data management, and financial analysis.
+          </p>
+          
+          <div class="contact-buttons">
+            <a href="https://www.linkedin.com/in/anika-bhatt" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+            </a>
+            <a href="mailto:anikabhatt210@gmail.com" class="btn btn-secondary">
+              <i class="fa-solid fa-envelope"></i> Email Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="fa-solid fa-chart-pie"></i> Skills & Technical Expertise
+        </h2>
+      </div>
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-calculator"></i> Finance & Analytics</h3>
+          <div class="skill-tags">
+            <span class="tag">Financial Accounting</span>
+            <span class="tag">Business Statistics</span>
+            <span class="tag">Business Calculus</span>
+            <span class="tag">Macro/Microeconomics</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-laptop-code"></i> Software & Tools</h3>
+          <div class="skill-tags">
+            <span class="tag">Microsoft Excel</span>
+            <span class="tag">PowerPoint & Word</span>
+            <span class="tag">Google Suite</span>
+            <span class="tag">Adobe Photoshop</span>
+            <span class="tag">Canva</span>
+            <span class="tag">HHAexchange</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-briefcase"></i> Operations & Strategy</h3>
+          <div class="skill-tags">
+            <span class="tag">Operations Management</span>
+            <span class="tag">Payroll Verification</span>
+            <span class="tag">Database Maintenance</span>
+            <span class="tag">Event Planning & Logistics</span>
+            <span class="tag">Fundraising Strategy</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h3><i class="fa-solid fa-language"></i> Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">English (Native)</span>
+            <span class="tag">Gujarati (Conversational)</span>
+            <span class="tag">Hindi (Conversational)</span>
+            <span class="tag">Spanish (Conversational)</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="fa-solid fa-folder-open"></i> Practical Experience & Projects
+        </h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Business Operations & Payroll Verification</h3>
+            <div class="project-role">Mango Home Health Intern Project</div>
+            <p class="project-desc">
+              Validated caregiver hours and resolved discrepancies to ensure accurate payroll processing. Coordinated with insurance providers to verify client coverage and managed digital database consistency.
+            </p>
+          </div>
+          <div class="project-footer">
+            <span class="project-tech">Operations • Excel • Data Entry</span>
+            <span class="project-link"><i class="fa-solid fa-circle-check"></i> Verified Experience</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Digital Marketing & Engagement Strategy</h3>
+            <div class="project-role">Artisan Studio & Arya Dance Academy</div>
+            <p class="project-desc">
+              Developed content strategies and launched targeted email marketing campaigns to expand community reach. Built promotional partnerships and organized student showcase logistics.
+            </p>
+          </div>
+          <div class="project-footer">
+            <span class="project-tech">Marketing • Canva • Email Strategy</span>
+            <span class="project-link"><i class="fa-solid fa-circle-check"></i> Verified Experience</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Strategic Fundraising & Event Planning</h3>
+            <div class="project-role">National Honors Society Vice President</div>
+            <p class="project-desc">
+              Structured comprehensive fundraising models, event timelines, and budget tracking goals. Led member execution strategies and organized community drive operations.
+            </p>
+          </div>
+          <div class="project-footer">
+            <span class="project-tech">Leadership • Financial Planning</span>
+            <span class="project-link"><i class="fa-solid fa-circle-check"></i> Verified Experience</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Anika Bhatt. Portfolio built for GitHub Pages submission.</p>
+  </footer>
+
+</body>
+</html>
