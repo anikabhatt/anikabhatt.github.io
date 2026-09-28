@@ -122,7 +122,7 @@
       grid-template-columns: 280px 1fr;
       gap: 4rem;
       align-items: start;
-      margin-bottom: 5rem;
+      margin-bottom: 4rem;
     }
 
     .profile-card {
@@ -245,6 +245,45 @@
       font-size: 0.95rem;
     }
 
+    /* Skills Grid Styling */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .skills-category {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.8rem;
+    }
+
+    .skills-category h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .skill-tag {
+      background-color: var(--bg);
+      border: 1px solid #e5e7eb;
+      color: var(--text-dark);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+    }
+
+    /* Projects Grid Styling */
     .pillars-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -258,6 +297,9 @@
       border-radius: 16px;
       padding: 2rem;
       transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .pillar-card:hover {
@@ -284,6 +326,19 @@
       color: var(--text-muted);
       font-size: 0.92rem;
       line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-link {
+      color: var(--text-dark);
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .project-link:hover {
+      color: var(--red-accent);
     }
 
     @media (max-width: 800px) {
@@ -314,6 +369,7 @@
       <div class="nav-right">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
         </ul>
         <a href="mailto:anikabhatt210@gmail.com" class="btn-resume">Contact Me</a>
@@ -323,6 +379,7 @@
 
   <main class="container">
     
+    <!-- About / Personal Statement Section -->
     <section id="about" class="hero-section">
       <div class="profile-card">
         <div class="avatar-wrapper">
@@ -334,10 +391,10 @@
       </div>
 
       <div class="hero-content">
-        <span class="status-pill"> Finance Major</span>
+        <span class="status-pill">Currently: Finance Major</span>
         <h1 class="hero-title">Multi-disciplinary business strategy, rooted at Rutgers.</h1>
         <p class="hero-description">
-          Welcome! I'm Anika, an undergraduate Finance student at Rutgers Business School. I am leveraging the diverse curriculum at Rutgers to develop a versatile skill set in corporate finance, business operations, data analytics, and marketing strategy. Explore my projects below, built on core business pillars.
+          Welcome! I'm Anika, an undergraduate Finance student at Rutgers Business School leveraging analytical, financial, and marketing strategies to drive cross-functional business growth. Explore my technical skills and featured projects below.
         </p>
         <div class="contact-links">
           <a href="mailto:anikabhatt210@gmail.com" class="link-email">Email Me</a>
@@ -348,29 +405,82 @@
 
     <hr class="section-divider">
 
+    <!-- Skills Section -->
+    <section id="skills" style="margin-bottom: 5rem;">
+      <div class="section-header">
+        <h2 class="section-title">Technical & Professional Skills</h2>
+        <p class="section-subtitle">A highlighted overview of core business competencies and tools.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skills-category">
+          <h3>Finance & Analytics</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Financial Modeling</span>
+            <span class="skill-tag">Corporate Finance</span>
+            <span class="skill-tag">Budget Tracking</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Microsoft Excel</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>Operations & Strategy</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Payroll Verification</span>
+            <span class="skill-tag">Database Management</span>
+            <span class="skill-tag">Process Optimization</span>
+            <span class="skill-tag">Cross-functional Collaboration</span>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3>Marketing & Management</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Email Marketing</span>
+            <span class="skill-tag">Content Strategy</span>
+            <span class="skill-tag">Event Planning</span>
+            <span class="skill-tag">Fundraising Strategy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Projects Section -->
     <section id="projects">
       <div class="section-header">
         <h2 class="section-title">Core Business Pillars: My Work</h2>
-        <p class="section-subtitle">This grid highlights sample projects demonstrating my analytical and strategic thinking across different business functions.</p>
+        <p class="section-subtitle">A showcase of relevant projects demonstrating strategic thinking across different business functions.</p>
       </div>
 
       <div class="pillars-grid">
         <div class="pillar-card">
-          <h3>Business Operations & Payroll Verification</h3>
-          <div class="role">Mango Home Health Intern Project</div>
-          <p>Validated caregiver hours and resolved discrepancies to ensure accurate payroll processing. Coordinated with insurance providers to verify client coverage eligibility and managed digital database consistency.</p>
+          <div>
+            <h3>Business Operations & Payroll Verification</h3>
+            <div class="role">Mango Home Health Intern Project</div>
+            <p>Validated caregiver hours and resolved discrepancies to ensure accurate payroll processing. Coordinated with insurance providers to verify client coverage eligibility and managed digital database consistency.</p>
+          </div>
+          <a href="https://github.com/anikabhatt" target="_blank" class="project-link">View Project Code &rarr;</a>
         </div>
 
         <div class="pillar-card">
-          <h3>Digital Marketing & Engagement Strategy</h3>
-          <div class="role">Artisan Studio & Arya Dance Academy</div>
-          <p>Developed content strategies and executed targeted email marketing campaigns to expand community reach. Built promotional partnerships and organized student showcase logistics.</p>
+          <div>
+            <h3>Digital Marketing & Engagement Strategy</h3>
+            <div class="role">Artisan Studio & Arya Dance Academy</div>
+            <p>Developed content strategies and executed targeted email marketing campaigns to expand community reach. Built promotional partnerships and organized student showcase logistics.</p>
+          </div>
+          <a href="https://github.com/anikabhatt" target="_blank" class="project-link">View Project Code &rarr;</a>
         </div>
 
         <div class="pillar-card">
-          <h3>Strategic Fundraising & Event Planning</h3>
-          <div class="role">National Honors Society Vice President</div>
-          <p>Structured comprehensive fundraising models, event timelines, and budget tracking goals. Led member execution strategies and organized community drive operations.</p>
+          <div>
+            <h3>Strategic Fundraising & Event Planning</h3>
+            <div class="role">National Honors Society Vice President</div>
+            <p>Structured comprehensive fundraising models, event timelines, and budget tracking goals. Led member execution strategies and organized community drive operations.</p>
+          </div>
+          <a href="https://github.com/anikabhatt" target="_blank" class="project-link">View Project Code &rarr;</a>
         </div>
       </div>
     </section>
